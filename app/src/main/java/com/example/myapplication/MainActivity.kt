@@ -59,7 +59,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun handleSignInResult(completedTask: Task<GoogleSignInAccount>) {
         try {
-            val account = completedTask.getResult(ApiException::class.java)
+            updateUI(completedTask.getResult(ApiException::class.java))
         } catch (e: ApiException) {
             // The ApiException status code indicates the detailed failure reason.
             // Please refer to the GoogleSignInStatusCodes class reference for more information.
@@ -68,7 +68,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun updateUI(account: GoogleSignInAccount?) {
-        Log.d(TAG, "signInResult:Succesful code="+account)
+        Log.d(TAG, "Google Sign In Succesful"+account)
     }
 
 }
