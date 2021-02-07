@@ -26,7 +26,6 @@ class MainActivity : AppCompatActivity() {
                 .requestEmail()
                 .build()
         mGoogleSignInClient = GoogleSignIn.getClient(this, gso)
-        dojfwofjdosfjdoufjduso
     }
 
     override fun onStart() {
